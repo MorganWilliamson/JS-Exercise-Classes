@@ -41,9 +41,9 @@ class Airplane {
 */
 
 class Person {
-  constructor(attr){
-    this.name = attr.name;
-    this.age = attr.age;
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
     this.stomach = [];
   };
   eat(edible){
@@ -89,9 +89,9 @@ personOne.toString();
 */
 
 class Car {
-  constructor(attr){
-    this.model = attr.model;
-    this.milesPerGallon = attr.milesPerGallon;
+  constructor(model, milesPerGallon){
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
     this.tank = 0;
     this.odometer = 0;
   };
