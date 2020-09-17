@@ -41,17 +41,17 @@ class Airplane {
 */
 
 class Person {
-  constructor(name, age){
-    this.name = name;
-    this.age = age;
+  constructor(attr){
+    this.name = attr.name;
+    this.age = attr.age;
     this.stomach = [];
   };
   eat(edible){
-    if(this.stomach.length += 10){
-      return `${this.name} is full! They can't eat anymore!`
-    } else {
+    if(this.stomach.length < 10){
       return this.stomach.push(edible);
-    }
+   } else if(this.stomach.length = 10){
+      return `${this.name} is full! They can't eat anymore!`
+    };
   };
   poop(){
     this.stomach = [];
@@ -66,13 +66,13 @@ const personOne = new Person ({
   age: 50,
 });
 
-console.log(personOne);
-console.log(personOne.stomach);
-console.log(personOne.eat('bagel'));
-console.log(personOne.stomach);
-console.log(personOne.poop());
-console.log(personOne.stomach);
-console.log(personOne.toString());
+
+personOne;
+personOne.eat("bagel");
+personOne.stomach;
+personOne.poop();
+personOne.stomach;
+personOne.toString();
 
 /*
   TASK 2
@@ -89,8 +89,29 @@ console.log(personOne.toString());
 */
 
 class Car {
+  constructor(attr){
+    this.model = attr.model;
+    this.milesPerGallon = attr.milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  };
+  fill(gallons){
 
+  };
+  drive(distance){
+
+  };
 }
+
+const carOne = new Car ({
+  model: 'Hyundai',
+  milesPerGallon: '25',
+});
+
+carOne;
+carOne.fill(10);
+carOne.drive(10);
+
 
 /*
   TASK 3
