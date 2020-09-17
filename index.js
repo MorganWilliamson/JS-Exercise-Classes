@@ -208,9 +208,37 @@ console.log(teachOne.grade(lambdaOne, 'Confidence'));
         + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
-class Student {
+class Student extends Lambdasian{
+  constructor(attr){
+    super(attr);
+    this.previousBackground = attr.previousBackground;
+    this.className = attr.className;
+    this.favSubjects = attr.favSubjects;
+  };
+  listSubjects(){
+    return `Loving ${this.favSubjects[0]}, ${this.favSubjects[1]}, ${this.favSubjects[2]}!`
+  };
+  PRAssignment(subject){
+    return `${this.name} has submitted a PR for ${subject}`
+  };
+  sprintChallenge(subject){
+    return `${this.name} has begun sprint challenge on ${subject}`
+  };
+};
 
-}
+const studentOne = new Student ({
+  name: 'Bob',
+  age: 27,
+  location: 'Tuscon',
+  previousBackground: 'Retail',
+  className: 'Web36',
+  favSubjects: ['HTML', 'CSS', 'JS'],
+});
+
+studentOne;
+studentOne.listSubjects();
+studentOne.PRAssignment('Array Methods');
+studentOne.sprintChallenge('Advanced CSS');
 
 /*
   TASK 6
